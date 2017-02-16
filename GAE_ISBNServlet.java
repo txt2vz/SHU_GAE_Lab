@@ -81,7 +81,7 @@ public class GAE_ISBNServlet extends HttpServlet {
 
 					Element eElement = (Element) nNode;
 					resp.getWriter().println("<br />Title : " + getTagValue("TitleLong", eElement));
-					resp.getWriter().println("<br />Publisher : " + getTagValue("PublisherText", eElement));					
+					resp.getWriter().println("<br />Publishers Text : " + getTagValue("PublisherText", eElement));					
 				}
 
 				resp.getWriter().println(strCallResult);
