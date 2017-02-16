@@ -51,7 +51,7 @@ public class GAE_ISBNServlet extends HttpServlet {
 				throw new Exception("ISBN field empty.");
 
 			// Create URL for API call - adding user entered isbn number
-			String strISBNServiceCall = "http://isbndb.com/api/books.xml?access_key=CM05PRX4&index1=isbn&value1="
+			String strISBNServiceCall = "http://isbndb.com/api/books.xml?access_key=your_key&index1=isbn&value1="
 					+ strISBN;
 			URL url = new URL(strISBNServiceCall);
 			BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()));
