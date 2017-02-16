@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=UTF-8">
+<title>GAE ISBN Service</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<h1>ISBN Lookup</h1>
+	<hr />
+	<p>
+		Lookup ISBN:<input type="text" id="isbn"></input>	
+	<button onclick="lookupISBN(isbn.value)">Lookup ISBN</button>
+	<p>
+		Book details : <br /> <span id="ISBNServletResponse"></span>
+	</p>
+	<footer>
+		(Powered by <a href="http://isbndb.com/">ISBNdb</a>)
+	</footer>
+</body>
+<script>
+  function lookupISBN(isbn) {
+    $.ajax({	
+	  url : "gae_isbn",
+	  data : "isbn=" + isbn,
+	  success : function(data) {
+			alert("data returned: " + data);
+			 $('#ISBNServletResponse').html(data);
+		     }
+	  });
+	}
+</script>
+</html>
