@@ -109,7 +109,7 @@ public class GAE_ISBNServlet extends HttpServlet {
 	// put properties in the response (output) string to be displayed on the web page.
 	for (Entity result : pq.asIterable()) {
 		resp.getWriter().println("<br />Title : " + (String)result.getProperty("Title"));
-		resp.getWriter().println("<br />Publisher : " + (String)result.getProperty("Publisher"));
+		resp.getWriter().println("<br />Publishers Text : " + (String)result.getProperty("Publisher"));
 		resp.getWriter().println("<br />ISBN : " + (String)result.getProperty("ISBN"));
 		resp.getWriter().println("<br />-------------------------------------------------------------------------------");
 	}
